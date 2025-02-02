@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Management System</h1>
+        <a href="add_task.html" class="btn">Add New Task</a>
+        <div class="filters">
+            <label for="status-filter">Status:</label>
+            <select id="status-filter">
+                <option value="">All</option>
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <label for="priority-filter">Priority:</label>
+            <select id="priority-filter">
+                <option value="">All</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button onclick="applyFilters()">Filter</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task Title</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-list"></tbody>
+        </table>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
